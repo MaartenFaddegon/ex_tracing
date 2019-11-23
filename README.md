@@ -1,21 +1,14 @@
-# ExTracing
+# Comparison of impact, tracing and logging
 
-**TODO: Add description**
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ex_tracing` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:ex_tracing, "~> 0.1.0"}
-  ]
-end
 ```
+Name               ips        average  deviation         median         99th %
+baseline      740.61 K        1.35 μs  ±1968.39%           1 μs           2 μs
+logging        18.53 K       53.97 μs    ±55.13%          47 μs         110 μs
+tracing         9.82 K      101.83 μs    ±32.18%          91 μs      210.33 μs
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ex_tracing](https://hexdocs.pm/ex_tracing).
-
+Comparison: 
+baseline      740.61 K
+logging        18.53 K - 39.97x slower +52.62 μs
+tracing         9.82 K - 75.42x slower +100.48 μs
+```
