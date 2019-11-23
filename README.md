@@ -1,4 +1,4 @@
-# Comparison of impact, tracing and logging
+# Comparison of unannotated code, traced code and logging
 
 
 ```
